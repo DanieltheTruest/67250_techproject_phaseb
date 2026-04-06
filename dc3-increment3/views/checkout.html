@@ -4,6 +4,7 @@
 <meta name="author" content="Daniel Chen">
 <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
 <meta name="description" content="MonoMuse website redesign project">
+<meta charset="utf-8">
 <title>MonoMuse</title>
 <link rel="stylesheet" href="../static/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,44 +12,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="../static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
 <nav>
   <a href="../index.html">Home</a>
   <a href="explore.html">Explore</a>
   <a href="exhibitions.html">Exhibitions</a>
-  <a id="navselected" href="tickets.html">Buy Tickets</a>
-  <a href="checkout.html">Checkout</a>
+  <a href="tickets.html">Buy Tickets</a>
+  <a id="navselected" href="checkout.html">Checkout</a>
 </nav>
 
     </header>
     <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
     <div class="main">
+    <form>
+    <label for="name">Name:(required)</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="email">Email: (required)</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="Ticket Quantity">Ticket Quantity: (required)</label><br>
+    <input type="number" id="quantity" name="quantity"required><br><br>
+    <input type="submit" value="Submit">
+    </form>
 
-<table>
-  <tr>
-    <th>Ticket Type</th>
-    <th>Description</th>
-    <th>Price</th>
-  </tr>
-  <tr>
-    <td>Adult</td>
-    <td>General Admissions for 18 and over.</td>
-    <td>$20.00</td>
-  </tr>
-  <tr>
-    <td>Student</td>
-    <td>Student ID required.</td>
-    <td>$10.00</td>
-  </tr>
-  <tr>
-    <td>Member</td>
-    <td>Member ID required.</td>
-    <td>$15.00</td>
-</table>
 
     </div>
-    <footer> <p> 2026 MonoMuse. All rights reserved.</p> </footer>
+    <footer> <p id="copyYear"></p> <p> MonoMuse. All rights reserved.</p> </footer>
 
 </body>
 

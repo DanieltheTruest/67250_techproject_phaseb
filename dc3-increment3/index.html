@@ -4,6 +4,7 @@
 <meta name="author" content="Daniel Chen">
 <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
 <meta name="description" content="MonoMuse website redesign project">
+<meta charset="utf-8">
 <title>MonoMuse</title>
 <link rel="stylesheet" href="static/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="./static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
 
 <nav>
@@ -24,7 +25,7 @@
     </header>
 <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
     <div class="main">
-    <h2>Welcome to MonoMuse</h2>
+    <h2 id="greeting">Welcome to MonoMuse</h2>
     <p>MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human creativity. 
         Through immersive exhibitions, interactive installations, and rotating collections, 
         MonoMuse invites visitors to discover how digital innovation is transforming the way we create, 
@@ -34,7 +35,7 @@
     
     <p><a id="ticketbutton" href="views/tickets.html"> Buy Tickets </a></p>   
     </div>
-    <footer> <p> 2026 MonoMuse. All rights reserved.</p> </footer>
+    <footer> <p id="copyYear"></p> <p> MonoMuse. All rights reserved.</p> </footer>
 
 </body>
 

@@ -4,6 +4,7 @@
 <meta name="author" content="Daniel Chen">
 <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
 <meta name="description" content="MonoMuse website redesign project">
+<meta charset="utf-8">
 <title>MonoMuse</title>
 <link rel="stylesheet" href="../static/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,26 +12,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <script src="../static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header>
-    <nav>
-    <a href="../index.html">Home</a>
-    <a href="explore.html">Explore</a>
-    <a id="navselected" href="exhibitions.html">Exhibitions</a>
-    <a href="tickets.html">Buy Tickets</a>
-    <a href="checkout.html">Checkout</a>
-    </nav>
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="explore.html">Explore</a>
+  <a href="exhibitions.html">Exhibitions</a>
+  <a id="navselected" href="tickets.html">Buy Tickets</a>
+  <a href="checkout.html">Checkout</a>
+</nav>
 
     </header>
     <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
     <div class="main">
-    <h3>The Ancient Artifacts of the Digital Today</h3>
-    <p>This exhibition explores the intersection of ancient artifacts and modern digital technology, 
-        showcasing how traditional objects are reimagined in a contemporary context.</p>
-    <h3>A World Beyond Our Eyes</h3>
-    <p> A sensory journey into a world of audio made possible by code.</p>
+
+<table>
+  <tr>
+    <th>Ticket Type</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Adult</td>
+    <td>General Admissions for 18 and over.</td>
+    <td>$20.00</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>Student ID required.</td>
+    <td>$10.00</td>
+  </tr>
+  <tr>
+    <td>Member</td>
+    <td>Member ID required.</td>
+    <td>$15.00</td>
+</table>
+
     </div>
-    <footer> <p> 2026 MonoMuse. All rights reserved.</p> </footer>
+    <footer> <p id="copyYear"></p> <p> MonoMuse. All rights reserved.</p> </footer>
 
 </body>
 
