@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta name="author" content="Daniel Chen">
+<meta name="author" content="Your name">
 <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
 <meta name="description" content="MonoMuse website redesign project">
 <meta charset="utf-8">
@@ -14,25 +14,33 @@
 </head>
 <body onload="addYear()">
     <div class="container">
-    <header>
-    <nav>
+    <header class="header">
+    </header>
+    <nav class="nav_bar">
     <a href="../index.html">Home</a>
     <a href="explore.html">Explore</a>
-    <a id="navselected" href="exhibitions.html">Exhibitions</a>
+    <a href="exhibitions.html">Exhibitions</a>
     <a href="tickets.html">Buy Tickets</a>
     <a href="checkout.html">Checkout</a>
+    <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
     </nav>
+    <main class="main">
+   
+    <img src="../images/explore.jpg" height="300" width="400" alt="Explore MonoMuse">
+    <h2>Mission Statement</h2>
+    <p> Monomuse is dedicated to exploring the evolving relationship between art, technology, and society. 
+    Our mission is to inspire curiosity, and creativity. 
+    </p>
+    <h2> Milestones </h2>
+    <ul>
+        <li>Founded in 2020</li>
+        <li>First exhibition opened in 2021</li>
+        <li>Expanded to include digital art installations</li>
+    </ul>
 
-    </header>
-    <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
-    <div class="main">
-    <h3>The Ancient Artifacts of the Digital Today</h3>
-    <p>This exhibition explores the intersection of ancient artifacts and modern digital technology, 
-        showcasing how traditional objects are reimagined in a contemporary context.</p>
-    <h3>A World Beyond Our Eyes</h3>
-    <p> A sensory journey into a world of audio made possible by code.</p>
-    </div>
-    <footer> <p id="copyYear"></p> <p> MonoMuse. All rights reserved.</p> </footer>
+
+    </main>
+    <footer class="footer"> <p id="copyYear"></p> <p> MonoMuse. All rights reserved.</p> </footer>
     </div>
 </body>
 
