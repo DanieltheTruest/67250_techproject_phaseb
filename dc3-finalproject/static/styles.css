@@ -80,7 +80,7 @@ form * {
 }
 .topnav {
    grid-area: nav_bar; 
-  border-bottom: #515151 solid 3px;
+  border-bottom: #515151 solid 2px;
 }
 .main {
   grid-area: main; 
