@@ -78,9 +78,9 @@ form * {
    grid-area: header; 
 
 }
-.nav_bar {
+.topnav {
    grid-area: nav_bar; 
-  border-bottom: #515151 solid 1px;
+  border-bottom: #515151 solid 3px;
 }
 .main {
   grid-area: main; 
