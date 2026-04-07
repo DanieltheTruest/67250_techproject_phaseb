@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="author" content="Daniel Chen">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<meta charset="utf-8">
+<title>MonoMuse</title>
+<link rel="stylesheet" href="../static/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="../static/script.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+
+    </header>
+    <nav class="topnav" id="navbar">
+  <a class = "firstLink" href="../index.html">Home</a>
+  <a href="explore.html">Explore</a>
+  <a href="exhibitions.html">Exhibitions</a>
+  <a href="tickets.html">Buy Tickets</a>
+  <a href="checkout.html">Checkout</a>
+  <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+  <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+</nav>
+ 
+    <main class="main">
+
+<table>
+  <tr>
+    <th>Ticket Type</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Adult</td>
+    <td>General Admissions for 18 and over.</td>
+    <td>$20.00</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>Student ID required.</td>
+    <td>$10.00</td>
+  </tr>
+  <tr>
+    <td>Member</td>
+    <td>Member ID required.</td>
+    <td>$15.00</td>
+</table>
+
+<h3>Available Dates — May 2026</h3>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Day</th>
+          <th>Time</th>
+          <th>Availability</th>
+          <th>Action</th>
+        </tr>
+        <tr>
+          <td>May 3</td>
+          <td>Saturday</td>
+          <td>10:00 AM</td>
+          <td>Available</td>
+          <td><span class="buyNow" onclick="showForm('May 3')">Buy Now</span></td>
+        </tr>
+        <tr>
+          <td>May 10</td>
+          <td>Saturday</td>
+          <td>10:00 AM</td>
+          <td>Available</td>
+          <td><span class="buyNow" onclick="showForm('May 10')">Buy Now</span></td>
+        </tr>
+        <tr>
+          <td>May 17</td>
+          <td>Saturday</td>
+          <td>2:00 PM</td>
+          <td>Available</td>
+          <td><span class="buyNow" onclick="showForm('May 17')">Buy Now</span></td>
+        </tr>
+        <tr>
+          <td>May 24</td>
+          <td>Saturday</td>
+          <td>2:00 PM</td>
+          <td>Available</td>
+          <td><span class="buyNow" onclick="showForm('May 24')">Buy Now</span></td>
+        </tr>
+      </table>
+
+      <div id="ticketForm">
+        <h3>Purchase Tickets</h3>
+        <p id="selectedDate"></p>
+        <label for="name">Name: (required)</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email: (required)</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="quantity">Number of Tickets: (required)</label><br>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+        <label for="ticketType">Ticket Type:</label><br>
+        <select id="ticketType" name="ticketType">
+          <option value="adult">Adult — $20.00</option>
+          <option value="student">Student — $10.00</option>
+          <option value="member">Member — $15.00</option>
+        </select><br><br>
+        <span id="submitbutton" onclick="submitForm()">Submit</span>
+      </div>
+    </main>
+    <footer class="footer"> <p id="copyYear"></p> <p> MonoMuse. All rights reserved.</p> </footer>
+</div>
+</body>
+
+</html>
