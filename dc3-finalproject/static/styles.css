@@ -1,0 +1,281 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#logo {
+  width: auto;
+  height: 60px
+}
+
+nav a {
+  text-decoration: none;
+  color: #515151;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  border-color: #4c3b5c;
+  }
+
+.active {
+  color: #7d70ad;
+  font-weight: 600;         
+  border-bottom: 2px solid #7d70ad;  
+  border-radius: 0;          
+}
+
+#ticketbutton {
+  background-color: #9470ad;
+  color: #f5f5f7;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.72);
+  }
+
+  th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #dfdfdf;
+}
+
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'hero hero'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+
+}
+.nav_bar {
+   grid-area: nav_bar; 
+  border-bottom: #515151 solid 1px;
+}
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+.topnav {
+   grid-area: nav_bar;
+   display: flex; 
+   justify-content: center;   
+}
+
+#longIntro {
+  display: none;
+}
+
+#readMore, #readLess {
+  background-color: #7d70ad;
+  color: #f5f5f7;
+  padding: 8px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#readLess {
+  display: none;
+}
+
+#ticketForm {
+  display: none;
+  margin-top: 24px;
+}
+
+.buyNow {
+  background-color: #7d70ad;
+  color: #f5f5f7;
+  padding: 6px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#submitbutton {
+  background-color: #92ad70;
+  color: #f5f5f7;
+  padding: 8px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+#selectedDate {
+  font-weight: 600;
+  color: #7d70ad;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #logo {
+    height: 45px;
+    margin-left: 0;
+  }
+
+  .container {
+    grid-template-areas:
+      'header'
+      'nav_bar'
+      'hero'
+      'main'
+      'footer';
+  }
+
+  table {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 650px) {
+  .topnav a {
+    display: none;
+  }
+  .topnav a.firstLink {
+    display: block;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 650px) {
+   .topnav.responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.introVideo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.intro p {
+  flex: 1;
+}
+
+.intro iframe {
+  width: 400px;
+  height: 225px;
+}
+
+#map { height: 400px; 
+  width: 50%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / -1;
+}
+
+.heroSlides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.heroSlides img {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.heroSlides img.active {
+  opacity: 1;
+}
+
+#greeting {
+  position: relative; 
+  color: #000000;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  z-index: 1;
+  font-size: 5rem;
+}

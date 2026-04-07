@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="author" content="Your name">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<meta charset="utf-8">
+<title>MonoMuse</title>
+<link rel="stylesheet" href="../static/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="" defer></script>
+<script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <div class="container">
+    <header class="header">
+    </header>
+  <nav class="topnav" id="navbar">
+  <a class = "firstLink" href="../index.html">Home</a>
+  <a href="explore.html">Explore</a>
+  <a href="exhibitions.html">Exhibitions</a>
+  <a href="tickets.html">Buy Tickets</a>
+  <a href="checkout.html">Checkout</a>
+  <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo"> 
+  <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+</nav>
+    <main class="main">
+   
+    <img src="../images/explore.jpg" height="300" width="400" alt="Explore MonoMuse">
+    <h2>Mission Statement</h2>
+    <p> Monomuse is dedicated to exploring the evolving relationship between art, technology, and society. 
+    Our mission is to inspire curiosity, and creativity. 
+    </p>
+    <h2> Milestones </h2>
+    <ul>
+        <li>Founded in 2020</li>
+        <li>First exhibition opened in 2021</li>
+        <li>Expanded to include digital art installations</li>
+    </ul>
+
+    <div id="map"> </div>
+
+    </main>
+    <footer class="footer"> <p id="copyYear"></p> <p> MonoMuse. All rights reserved.</p> </footer>
+    </div>
+</body>
+
+</html>
